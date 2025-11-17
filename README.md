@@ -1,40 +1,6 @@
 # Design-Patterns-JS
 
 Design Patterns Practice — Variant: Rectangle & Cone
-📁 Project Structure
-src/
-├─ geometry/
-│  ├─ point2D.ts
-│  ├─ point3D.ts
-│
-├─ shapes/
-│  ├─ shape.ts
-│  ├─ rectangle.ts
-│
-├─ cone/
-│  ├─ coneModel.ts
-│
-├─ factories/
-│  ├─ rectangleFactory.ts
-│  ├─ coneFactory.ts
-│
-├─ validators/
-│  ├─ RectangleValidator.ts
-│  ├─ ConeValidator.ts
-│
-├─ services/
-│  ├─ rectangleService.ts
-│  ├─ coneService.ts
-│
-├─ common/
-│  ├─ errors/
-│  │  ├─ RectangleValidationError.ts
-│  │  ├─ ConeValidationError.ts
-│  │  ├─ ShapeValidationError.ts
-│  ├─ logging/
-│     ├─ logger.ts
-│
-├─ index.ts
 
 🎯 Implemented Functionality
 Rectangle
