@@ -1,0 +1,250 @@
+{"level":50,"time":"2025-11-17T15:13:48.771Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.835Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:13:48.771Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.771Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.771Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.773Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.773Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.774Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.774Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.774Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.774Z","pid":55200,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:13:48.836Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:13:48.836Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:13:48.837Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:13:48.837Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:13:48.837Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:13:48.838Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:13:48.839Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:13:48.839Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:13:48.840Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:13:48.840Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:13:48.840Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:13:48.841Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:13:48.841Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:13:48.841Z","pid":44836,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:18:06.224Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:18:06.224Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:18:06.224Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:18:06.225Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:18:06.225Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:18:06.225Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:18:06.226Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:18:06.227Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:18:06.227Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:18:06.227Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:18:06.227Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:18:06.227Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:18:06.228Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:18:06.228Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:18:06.228Z","pid":45468,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:18:06.316Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.317Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.317Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.317Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.319Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.319Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.320Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.320Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.320Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:18:06.320Z","pid":54232,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.309Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.309Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.310Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.310Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.312Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.312Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.313Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.313Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.313Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.313Z","pid":56460,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":"2025-11-17T15:19:04.360Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:19:04.360Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:19:04.360Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:19:04.361Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:19:04.361Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:19:04.361Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:19:04.361Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:19:04.361Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:19:04.361Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:19:04.362Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:19:04.362Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:19:04.362Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":"2025-11-17T15:19:04.362Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":"2025-11-17T15:19:04.362Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":"2025-11-17T15:19:04.362Z","pid":36728,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763393690231,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763393690231,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763393690231,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763393690232,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763393690232,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763393690232,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763393690233,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763393690233,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763393690233,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763393690234,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763393690234,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763393690234,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763393690235,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763393690235,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763393690235,"pid":55580,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763393690279,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763393690280,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763393690281,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763393690281,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763393690284,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763393690284,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763393690285,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763393690285,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763393690285,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763393690285,"pid":48256,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763394240316,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763394240317,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763394240318,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763394240318,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763394240339,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763394240339,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763394240339,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763394240340,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763394240340,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763394240340,"pid":50844,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763394240318,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763394240318,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763394240318,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763394240319,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763394240319,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763394240319,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763394240319,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763394240319,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763394240319,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763394240320,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763394240320,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763394240320,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763394240321,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763394240321,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763394240321,"pid":38368,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395357448,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395357448,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395357449,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395357450,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395357454,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395357454,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395357456,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395357456,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395357458,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395357458,"pid":11608,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395357832,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395357832,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395357832,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395357832,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395357832,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395357832,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395357833,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395357833,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395357833,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395357834,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395357834,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395357834,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395357835,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395357835,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395357835,"pid":50892,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395366861,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395366861,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395366863,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395366863,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395366866,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395366866,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395366867,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395366867,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395366868,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763395366868,"pid":57660,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763395367017,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395367018,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395367018,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395367019,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395367019,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395367019,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395367020,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395367020,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395367020,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395367021,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395367021,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395367021,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763395367023,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763395367023,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763395367023,"pid":52592,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396493469,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396493483,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396493470,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396493470,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396493471,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396493472,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396493472,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396493472,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396493472,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396493472,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396493473,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396493473,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396493473,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396493474,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396493474,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396493474,"pid":39216,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396493483,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396493484,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396493484,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396493486,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396493486,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396493487,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396493487,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396493488,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396493488,"pid":51308,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396956296,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396956296,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396956296,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396956304,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396956304,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396956304,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396956305,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396956305,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396956305,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396956306,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396956306,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396956306,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396956313,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763396956313,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763396956313,"pid":52528,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763396956420,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396956420,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396956421,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396956421,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396956425,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396956425,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396956426,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396956426,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763396956426,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763396956426,"pid":18956,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763401500523,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763401500523,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763401500523,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763401500523,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763401500527,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763401500527,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763401500528,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763401500528,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763401500528,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"a b c d\": Rectangle parameters must be valid numbers"}
+{"level":50,"time":1763401500528,"pid":50056,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid rectangle line \"-7 -4 -6 -5\": Rectangle: width and height must be positive numbers"}
+{"level":50,"time":1763401500550,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763401500550,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763401500550,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763401500551,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763401500552,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763401500552,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763401500553,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763401500553,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763401500553,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763401500554,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763401500554,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763401500554,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
+{"level":50,"time":1763401500556,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"0 0 0 0 0\": Cone radius and height must be positive"}
+{"level":50,"time":1763401500556,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"-10 20 30 14\": Cone must have exactly 5 numeric values: cx cy cz radius height"}
+{"level":50,"time":1763401500556,"pid":9212,"hostname":"DESKTOP-Q0O0MOK","args":[],"msg":"❌ ERROR: Invalid cone line \"a b c d e\": Cone contains invalid numeric values"}
