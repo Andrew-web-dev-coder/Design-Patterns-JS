@@ -80,17 +80,6 @@ npm run test
 
 Coverage is collected for all modules, including factories, validators, services, geometry, shapes, and cone models.
 
-🧑‍💻 Development
-
-Run the application and analyze data from input files:
-
-npm run dev
-
-Lint the project
-npm run lint
-# or auto-fix issues:
-npm run lint:fix
-
 📥 Input Data
 
 Figures are loaded from:
