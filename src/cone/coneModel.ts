@@ -1,15 +1,7 @@
 import { Shape } from "../shapes/shape";
 import { Point3D } from "../geometry/point3D";
 
-/**
- * ConeModel — класс геометрического конуса.
- * Содержит:
- *  - volume()
- *  - baseArea()
- *  - surfaceArea()
- *  - volumeSliceRatio()
- *  - isBaseOnCoordinatePlane()
- */
+
 export class ConeModel extends Shape {
     public readonly center: Point3D;
     public readonly radius: number;
@@ -30,17 +22,17 @@ export class ConeModel extends Shape {
         this.height = height;
     }
 
-    /** Объём конуса */
+   
     public volume(): number {
         return (Math.PI * this.radius * this.radius * this.height) / 3;
     }
 
-    /** Площадь основания */
+    
     public baseArea(): number {
         return Math.PI * this.radius * this.radius;
     }
 
-    /** Полная площадь поверхности (боковая + основание) */
+    
     public surfaceArea(): number {
         const slant = Math.sqrt(this.radius * this.radius + this.height * this.height);
         const lateralArea = Math.PI * this.radius * slant;
@@ -48,40 +40,29 @@ export class ConeModel extends Shape {
         return lateralArea + base;
     }
 
-    /**
-     * Отношение объёмов двух частей конуса,
-     * если рассечь его плоскостью Z=0, Z=center.z или Z=center.z+height.
-     *
-     * Если плоскость НЕ пересекает конус — возвращаем null.
-     * Если проходит строго по основанию — возвращаем 0.
-     */
+    
     public volumeSliceRatio(planeZ: number): number | null {
         const baseZ = this.center.z;
         const topZ = this.center.z + this.height;
 
         if (planeZ <= baseZ || planeZ >= topZ) {
-            return null; // не пересекает тело конуса
+            return null; 
         }
 
-        // расстояние от вершины (top) до плоскости
+        
         const cutHeight = topZ - planeZ;
         const h = this.height;
 
-        // объём верхней меньше части (усечённый конус до вершины)
+        
         const upperVolume = (Math.PI * this.radius * this.radius * cutHeight) / 3;
 
-        // оставшаяся нижняя часть
+        
         const lowerVolume = this.volume() - upperVolume;
 
         return lowerVolume / upperVolume;
     }
 
-    /**
-     * Проверка — лежит ли основание на одной из координатных плоскостей:
-     * XY → center.z == 0
-     * XZ → center.y == 0
-     * YZ → center.x == 0
-     */
+    
     public isBaseOnCoordinatePlane(): boolean {
         return (
             this.center.z === 0 ||
@@ -90,7 +71,7 @@ export class ConeModel extends Shape {
         );
     }
 
-    /** Генерация случайной точки внутри конуса */
+   
     public randomPointInside(): Point3D {
         const r = this.radius * Math.sqrt(Math.random());
         const theta = Math.random() * 2 * Math.PI;

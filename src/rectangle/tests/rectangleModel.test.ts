@@ -1,6 +1,6 @@
 import { RectangleModel } from "../rectangleModel";
 
-// Мокаем Shape, чтобы покрыть super()
+
 jest.mock("../../shapes/shape", () => {
     return {
         Shape: class MockShape {
@@ -42,7 +42,7 @@ describe("RectangleModel FULL COVERAGE", () => {
         expect(r.diagonal()).toBe(5);
     });
 
-    // -------- touchesAxis FULL BRANCH COVERAGE ----------
+    
 
     test("touchesAxis: touches X only", () => {
         const r = new RectangleModel(10, -5, 5, 10);

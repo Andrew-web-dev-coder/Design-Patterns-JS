@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import jest from "eslint-plugin-jest";
@@ -11,12 +9,12 @@ export default [
 
   js.configs.recommended,
 
-  // TypeScript
+
   ...tseslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
 
-  // Jest tests
+ 
   {
     files: ["**/*.test.ts"],
     plugins: {

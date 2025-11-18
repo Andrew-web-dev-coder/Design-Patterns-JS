@@ -1,4 +1,4 @@
-// point2D.ts
+
 export class Point2D {
     public readonly x: number;
     public readonly y: number;
@@ -12,14 +12,14 @@ export class Point2D {
         this.y = y;
     }
 
-    /** Distance to another point */
+    
     public distanceTo(other: Point2D): number {
         const dx = this.x - other.x;
         const dy = this.y - other.y;
         return Math.sqrt(dx * dx + dy * dy);
     }
 
-    /** Returns vector from this point to another */
+    
     public vectorTo(other: Point2D): { x: number; y: number } {
         return {
             x: other.x - this.x,

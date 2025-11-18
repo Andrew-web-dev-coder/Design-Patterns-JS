@@ -1,5 +1,3 @@
-// src/shapes/shape.ts
-
 export type ShapeDimension = "2D" | "3D";
 
 export type ShapeKind = "rectangle" | "cone" | "unknown";
@@ -23,7 +21,7 @@ export abstract class Shape {
         this.id = options.id ?? Shape.generateId(options.kind);
     }
 
-    /** Генерация простого уникального id вида "rectangle-kx83af-maz1" */
+    
     private static generateId(kind: ShapeKind): string {
         const rand = Math.random().toString(36).slice(2, 8);
         const stamp = Date.now().toString(36);

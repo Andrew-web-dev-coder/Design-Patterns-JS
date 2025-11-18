@@ -19,6 +19,6 @@ describe("ConeFactory FULL COVERAGE", () => {
 
     test("fromTextLine should return null on invalid line", () => {
         const cone = ConeFactory.fromTextLine("bad data");
-        expect(cone).toBeNull();   // ← покрывает catch
+        expect(cone).toBeNull();   
     });
 });

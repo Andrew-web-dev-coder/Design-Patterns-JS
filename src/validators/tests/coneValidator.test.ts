@@ -3,9 +3,7 @@ import { ConeValidationError } from "../../common/errors/ConeValidationError";
 
 describe("ConeValidator — FULL COVERAGE", () => {
 
-    // ---------------------------------------------------------
-    // validateTextLine
-    // ---------------------------------------------------------
+    
 
     test("validateTextLine parses valid string", () => {
         const res = ConeValidator.validateTextLine("1 2 3 4 5");
@@ -50,9 +48,7 @@ describe("ConeValidator — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // validateNumeric
-    // ---------------------------------------------------------
+    
 
     test("validateNumeric accepts valid numbers", () => {
         expect(() => ConeValidator.validateNumeric([1, 2, 3, 4, 5])).not.toThrow();

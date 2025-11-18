@@ -12,7 +12,7 @@ describe("ReadParametersError tests", () => {
         const original = Error.captureStackTrace;
         let used = false;
 
-        // мок captureStackTrace
+        
         Error.captureStackTrace = () => {
             used = true;
         };
@@ -20,21 +20,21 @@ describe("ReadParametersError tests", () => {
         new ReadParametersError("Test");
         expect(used).toBe(true);
 
-        // вернуть оригинал
+        
         Error.captureStackTrace = original;
     });
 
     test("should still work when captureStackTrace is missing", () => {
         const original = Error.captureStackTrace;
 
-        // удалить функцию
+       
         // @ts-ignore
         delete Error.captureStackTrace;
 
         const err = new ReadParametersError("No capture");
         expect(err.stack).toBeDefined();
 
-        // восстановить функцию
+        
         Error.captureStackTrace = original;
     });
 });

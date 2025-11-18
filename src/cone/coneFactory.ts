@@ -4,7 +4,7 @@ import { ConeValidator } from "../validators/coneValidator";
 
 export class ConeFactory {
 
-    /** Create ConeModel from array of numbers */
+    
     public static fromNumbers(values: number[]): ConeModel {
         ConeValidator.validateNumeric(values);
 
@@ -14,7 +14,7 @@ export class ConeFactory {
         return new ConeModel(center, radius, height);
     }
 
-    /** Create ConeModel from text line: "cx cy cz radius height" */
+    
     public static fromTextLine(line: string): ConeModel | null {
         try {
             const nums = ConeValidator.validateTextLine(line);

@@ -2,7 +2,7 @@ import { RectangleValidationError } from "../common/errors/RectangleValidationEr
 
 export class RectangleValidator {
 
-    /** Validate numeric array: [x, y, width, height] */
+    
     public static validateNumeric(values: number[]): void {
         if (values.length !== 4) {
             throw new RectangleValidationError(
@@ -15,7 +15,7 @@ export class RectangleValidator {
         }
     }
 
-    /** Validate text line and convert to numbers */
+    
     public static validateTextLine(line: string): number[] {
         const parts = line.trim().split(/\s+/);
 

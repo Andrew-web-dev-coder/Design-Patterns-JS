@@ -2,9 +2,7 @@ import { Point2D } from "../point2D";
 
 describe("Point2D tests", () => {
 
-    // ------------------------------
-    // Constructor tests
-    // ------------------------------
+    
     test("should create a point with valid finite coordinates", () => {
         const p = new Point2D(3, 4);
         expect(p.x).toBe(3);
@@ -23,14 +21,12 @@ describe("Point2D tests", () => {
         expect(() => new Point2D(5, "b" as any)).toThrow();
     });
 
-    // ------------------------------
-    // distanceTo tests
-    // ------------------------------
+    
     test("distanceTo should compute Euclidean distance", () => {
         const p1 = new Point2D(0, 0);
         const p2 = new Point2D(3, 4);
 
-        expect(p1.distanceTo(p2)).toBe(5); // классическое 3-4-5
+        expect(p1.distanceTo(p2)).toBe(5); 
     });
 
     test("distanceTo should return 0 for same point", () => {
@@ -38,9 +34,7 @@ describe("Point2D tests", () => {
         expect(p.distanceTo(p)).toBe(0);
     });
 
-    // ------------------------------
-    // vectorTo tests
-    // ------------------------------
+    
     test("vectorTo should compute vector difference", () => {
         const p1 = new Point2D(1, 2);
         const p2 = new Point2D(4, 10);

@@ -1,13 +1,8 @@
 import { ConeValidationError } from "../common/errors/ConeValidationError";
 
-/**
- * Валидатор текстовой строки для конуса.
- * Формат строки: "cx cy cz radius height"
- */
+
 export class ConeValidator {
-    /**
-     * Проверяет строку и возвращает массив чисел.
-     */
+    
     public static validateTextLine(line: string): number[] {
         if (!line.trim()) {
             throw new ConeValidationError("Cone line is empty");
@@ -36,9 +31,7 @@ export class ConeValidator {
         return nums;
     }
 
-    /**
-     * Проверка массива чисел (используется Factory)
-     */
+    
     public static validateNumeric(values: number[]): void {
         if (values.length !== 5) {
             throw new ConeValidationError(

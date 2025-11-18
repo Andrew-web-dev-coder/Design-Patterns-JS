@@ -1,8 +1,6 @@
 import pino from "pino";
 
-// ------------------------------
-// БАЗОВАЯ КОНФИГУРАЦИЯ PINO
-// ------------------------------
+
 export const logger = pino({
     level: "info",
 
@@ -27,9 +25,7 @@ export const logger = pino({
     },
 });
 
-// ------------------------------
-// ОБЕРТКА ДЛЯ ТЕСТОВ + ЧИСТЫЙ API
-// ------------------------------
+
 export class Logger {
     static info(message: string, ...args: unknown[]): void {
         logger.info({ args }, `ℹ️  INFO: ${message}`);

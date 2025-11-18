@@ -14,9 +14,7 @@ jest.mock("../../cone/coneFactory");
 
 describe("ConeService tests", () => {
 
-    // ---------------------------------
-    // getVolume / getBaseArea
-    // ---------------------------------
+    
 
     test("getVolume returns correct value", () => {
         const cone = { volume: () => 42 } as ConeModel;
@@ -28,9 +26,7 @@ describe("ConeService tests", () => {
         expect(ConeService.getBaseArea(cone)).toBe(10);
     });
 
-    // ---------------------------------
-    // in-memory operations
-    // ---------------------------------
+   
 
     test("filterByMinVolume filters correctly", () => {
         const c1 = { volume: () => 5 } as ConeModel;
@@ -85,10 +81,7 @@ describe("ConeService tests", () => {
             .toThrow(ReadParametersError);
     });
 
-    // ---------------------------------
-    // loadFromFile
-    // ---------------------------------
-
+    
     test("loadFromFile reads file and parses valid lines", () => {
         (fs.readFileSync as jest.Mock).mockReturnValue(`
             0 0 0 5 10

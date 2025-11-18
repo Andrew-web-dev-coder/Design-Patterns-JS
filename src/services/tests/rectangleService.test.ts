@@ -13,9 +13,7 @@ jest.mock("../../factories/rectangleFactory");
 
 describe("RectangleService — FULL COVERAGE", () => {
 
-    // ---------------------------------------------------------
-    // loadFromFile
-    // ---------------------------------------------------------
+    
 
     test("loadFromFile loads valid rectangles", () => {
         (fs.readFileSync as jest.Mock).mockReturnValue(`
@@ -82,9 +80,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // totalArea
-    // ---------------------------------------------------------
+    
 
     test("totalArea calculates correct sum", () => {
         const r1 = { area: () => 10 } as RectangleModel;
@@ -98,9 +94,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // findTouchingAxis
-    // ---------------------------------------------------------
+    
 
     test("findTouchingAxis returns only axis-touching rectangles", () => {
         const r1 = { touchesAxis: () => true } as RectangleModel;
@@ -112,10 +106,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // findLargest
-    // ---------------------------------------------------------
-
+   
     test("findLargest returns null for empty array", () => {
         expect(RectangleService.findLargest([])).toBeNull();
     });
@@ -129,9 +120,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // sortByArea
-    // ---------------------------------------------------------
+ 
 
     test("sortByArea sorts rectangles by area ASC", () => {
         const r1 = { area: () => 8 } as RectangleModel;
@@ -143,10 +132,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // maxArea
-    // ---------------------------------------------------------
-
+    
     test("maxArea returns null for empty array", () => {
         expect(RectangleService.maxArea([])).toBeNull();
     });
@@ -158,9 +144,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // minArea
-    // ---------------------------------------------------------
+    
 
     test("minArea returns null for empty array", () => {
         expect(RectangleService.minArea([])).toBeNull();
@@ -173,9 +157,7 @@ describe("RectangleService — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // invalid arguments (branches)
-    // ---------------------------------------------------------
+   
 
     test("findTouchingAxis throws when input is not an array", () => {
         expect(() => RectangleService.findTouchingAxis(null as any))

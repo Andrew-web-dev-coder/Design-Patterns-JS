@@ -29,7 +29,7 @@ describe("Point3D tests", () => {
         const p1 = new Point3D(0, 0, 0);
         const p2 = new Point3D(3, 4, 12);
 
-        // sqrt(9 + 16 + 144) = sqrt(169) = 13
+    
         expect(p1.distanceTo(p2)).toBe(13);
     });
 

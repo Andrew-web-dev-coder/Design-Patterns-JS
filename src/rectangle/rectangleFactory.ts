@@ -5,7 +5,7 @@ import { RectangleModel } from "./rectangleModel";
 
 export class RectangleFactory {
 
-    /** Create Rectangle from array: [x, y, width, height] */
+   
     public static fromNumbers(values: number[]): RectangleModel {
         RectangleValidator.validateNumeric(values);
 
@@ -14,7 +14,7 @@ export class RectangleFactory {
         return new RectangleModel(x, y, width, height);
     }
 
-    /** Create Rectangle from text line: "x y width height" */
+    
     public static fromTextLine(line: string): RectangleModel | null {
         try {
             const nums = RectangleValidator.validateTextLine(line);

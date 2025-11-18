@@ -5,22 +5,11 @@ import { RectangleValidationError } from "../../common/errors/RectangleValidatio
 import { RectangleService } from "../../services/rectangleService";
 import { FileReadError } from "../../common/errors/FileReadError";
 
-/**
- * Rectangle module tests including:
- *  - Validator
- *  - Factory
- *  - Model
- *  - Service
- *  - File loading
- */
+
 
 describe("Rectangle module tests", () => {
 
-    //
-    // ---------------------------------------------------------
-    // Validator tests
-    // ---------------------------------------------------------
-    //
+   
 
     test("Validator should parse valid line correctly", () => {
         const nums = RectangleValidator.validateTextLine("0 0 10 20");
@@ -37,11 +26,7 @@ describe("Rectangle module tests", () => {
             .toThrow(RectangleValidationError);
     });
 
-    //
-    // ---------------------------------------------------------
-    // Factory tests
-    // ---------------------------------------------------------
-    //
+   
 
     test("Factory should create RectangleModel object", () => {
         const nums = [0, 0, 10, 20];
@@ -62,11 +47,7 @@ describe("Rectangle module tests", () => {
         expect(res).toBeNull();
     });
 
-    //
-    // ---------------------------------------------------------
-    // Model tests
-    // ---------------------------------------------------------
-    //
+   
 
     test("RectangleModel should calculate area", () => {
         const rect = new RectangleModel(0, 0, 10, 20);
@@ -83,12 +64,7 @@ describe("Rectangle module tests", () => {
         expect(rect.diagonal()).toBe(5);
     });
 
-    //
-    // ---------------------------------------------------------
-    // Service tests
-    // ---------------------------------------------------------
-    //
-
+   
     test("Service: sortByArea should sort rectangles ascending", () => {
         const r1 = new RectangleModel(0, 0, 2, 2);  // area 4
         const r2 = new RectangleModel(0, 0, 3, 3);  // area 9
@@ -116,11 +92,7 @@ describe("Rectangle module tests", () => {
         expect(min?.area()).toBe(4);
     });
 
-    //
-    // ---------------------------------------------------------
-    // File-loading tests
-    // ---------------------------------------------------------
-    //
+    
 
     test("Service.loadFromFile should load rectangles from valid file", () => {
         const rects = RectangleService.loadFromFile("data/sample_rectangles.txt");
@@ -130,7 +102,7 @@ describe("Rectangle module tests", () => {
 
     test("Service.loadFromFile should skip invalid lines", () => {
         const rects = RectangleService.loadFromFile("data/sample_rectangles.txt");
-        // в sample_rectangles есть 1–2 ошибочные строки
+       
         expect(rects.length).toBeGreaterThanOrEqual(1);
     });
 
@@ -158,28 +130,22 @@ describe("Rectangle module tests", () => {
         expect(min).not.toBeNull();
     });
 
-        //
-    // ---------------------------------------------------------
-    // touchesAxis() FULL COVERAGE
-    // ---------------------------------------------------------
-    //
+  
 
     test("RectangleModel.touchesAxis returns true when touching X-axis only", () => {
-        // yMin = -5, yMax = 5  → пересекает X
-        // xMin = 10, xMax = 20 → НЕ пересекает Y
+        
         const r = new RectangleModel(10, -5, 10, 10);
         expect(r.touchesAxis()).toBe(true);
     });
 
     test("RectangleModel.touchesAxis returns true when touching Y-axis only", () => {
-        // xMin = -5, xMax = 5 → пересекает Y
-        // yMin = 10, yMax = 20 → НЕ пересекает X
+        
         const r = new RectangleModel(-5, 10, 10, 10);
         expect(r.touchesAxis()).toBe(true);
     });
 
     test("RectangleModel.touchesAxis returns true when touching BOTH axes", () => {
-        // охватывает (0,0)
+       
         const r = new RectangleModel(-5, -5, 10, 10);
         expect(r.touchesAxis()).toBe(true);
     });

@@ -3,10 +3,7 @@ import { RectangleValidationError } from "../../common/errors/RectangleValidatio
 
 describe("RectangleValidator — FULL COVERAGE", () => {
 
-    // ---------------------------------------------------------
-    // validateNumeric
-    // ---------------------------------------------------------
-
+    
     test("validateNumeric accepts valid values", () => {
         expect(() => RectangleValidator.validateNumeric([1, 2, 3, 4])).not.toThrow();
     });
@@ -25,9 +22,7 @@ describe("RectangleValidator — FULL COVERAGE", () => {
     });
 
 
-    // ---------------------------------------------------------
-    // validateTextLine
-    // ---------------------------------------------------------
+    
 
     test("validateTextLine parses valid line", () => {
         const nums = RectangleValidator.validateTextLine("1 2 3 4");

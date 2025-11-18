@@ -9,7 +9,7 @@ module.exports = {
   testMatch: ["**/__tests__/**/*.test.ts", "**/*.test.ts"],
 
   moduleNameMapper: {
-    "^(.*)\\.js$": "$1", // на случай ESM импорта
+    "^(.*)\\.js$": "$1", 
   },
 
   collectCoverage: true,

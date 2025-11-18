@@ -63,10 +63,10 @@ describe("Rectangle class", () => {
     });
 
     test("should detect another invalid rectangle (opposite sides mismatch)", () => {
-        // Это прямоугольник с разной длиной противоположных сторон
+        
         const p1 = new Point2D(0, 0);
         const p2 = new Point2D(4, 0);
-        const p3 = new Point2D(5, 3); // специально смещено
+        const p3 = new Point2D(5, 3); 
         const p4 = new Point2D(0, 3);
 
         expect(() => new Rectangle(p1, p2, p3, p4)).toThrow();

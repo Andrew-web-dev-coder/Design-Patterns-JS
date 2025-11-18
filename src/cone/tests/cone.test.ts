@@ -76,9 +76,7 @@ describe("Cone module tests", () => {
 });
 
 
-// ------------------------------------
-// TXT file tests
-// ------------------------------------
+
 describe("Cone TXT file tests", () => {
 
     const filePath = path.join(__dirname, "../../../data/sample_cones.txt");
@@ -128,11 +126,7 @@ describe("Cone TXT file tests", () => {
         expect(min?.volume()).toBeCloseTo(smallest);
     });
     
-        //
-    // ---------------------------------------------------------
-    // ConeValidator FULL COVERAGE
-    // ---------------------------------------------------------
-    //
+ 
 
     test("validateTextLine should throw on empty line", () => {
         expect(() => ConeValidator.validateTextLine("")).toThrow(ConeValidationError);
@@ -153,10 +147,7 @@ describe("Cone TXT file tests", () => {
         expect(() => ConeValidator.validateTextLine("0 0 0 -1 10")).toThrow(ConeValidationError);
     });
 
-    //
-    // validateNumeric() extra coverage
-    //
-
+    
     test("validateNumeric should throw when array length !== 5", () => {
         expect(() => ConeValidator.validateNumeric([1, 2, 3])).toThrow(ConeValidationError);
     });

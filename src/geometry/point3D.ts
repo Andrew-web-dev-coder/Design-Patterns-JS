@@ -1,4 +1,4 @@
-// point3D.ts
+
 export class Point3D {
     public readonly x: number;
     public readonly y: number;
@@ -14,7 +14,7 @@ export class Point3D {
         this.z = z;
     }
 
-    /** Distance to another 3D point */
+   
     public distanceTo(other: Point3D): number {
         const dx = this.x - other.x;
         const dy = this.y - other.y;
@@ -22,7 +22,7 @@ export class Point3D {
         return Math.sqrt(dx * dx + dy * dy + dz * dz);
     }
 
-    /** 3D vector to another point */
+    
     public vectorTo(other: Point3D): { x: number; y: number; z: number } {
         return {
             x: other.x - this.x,
