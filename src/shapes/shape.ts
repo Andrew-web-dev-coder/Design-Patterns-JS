@@ -1,7 +1,9 @@
+// src/shapes/shape.ts
+
 export type ShapeDimension = "2D" | "3D";
 
-export type ShapeKind = "rectangle" | "cone" | "unknown";
-
+// добавили "test" для юнит-теста TestShape
+export type ShapeKind = "rectangle" | "cone" | "unknown" | "test";
 
 export abstract class Shape {
     public readonly id: string;
@@ -21,7 +23,6 @@ export abstract class Shape {
         this.id = options.id ?? Shape.generateId(options.kind);
     }
 
-    
     private static generateId(kind: ShapeKind): string {
         const rand = Math.random().toString(36).slice(2, 8);
         const stamp = Date.now().toString(36);
