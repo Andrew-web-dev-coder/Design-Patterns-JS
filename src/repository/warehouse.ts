@@ -5,11 +5,6 @@ import { RectangleModel } from "../rectangle/rectangleModel";
 import { ConeModel } from "../cone/coneModel";
 import { RepositoryObserver } from "./shapeRepository";
 
-/**
- * Набор вычисленных параметров для фигуры.
- * Для прямоугольника используем area/perimeter,
- * для конуса — volume/surfaceArea/baseArea.
- */
 export interface ShapeMetrics {
     area?: number;
     perimeter?: number;
@@ -18,24 +13,19 @@ export interface ShapeMetrics {
     baseArea?: number;
 }
 
-/**
- * Warehouse — Singleton + Observer.
- * Хранит вычисленные параметры фигур и
- * автоматически пересчитывает их при изменениях
- * в репозитории (add/replace/remove).
- */
 export class Warehouse implements RepositoryObserver<Shape> {
     private static instance: Warehouse | null = null;
 
-    private readonly storage: Map<string, ShapeMetrics> = new Map();
+    /** тесты специально лезут сюда через (w as any).storage */
+    private readonly storage = new Map<string, ShapeMetrics>();
 
     private constructor() {}
 
     public static getInstance(): Warehouse {
-        if (!Warehouse.instance) {
-            Warehouse.instance = new Warehouse();
+        if (!this.instance) {
+            this.instance = new Warehouse();
         }
-        return Warehouse.instance;
+        return this.instance;
     }
 
     public getMetrics(id: string): ShapeMetrics | undefined {
@@ -46,8 +36,7 @@ export class Warehouse implements RepositoryObserver<Shape> {
         this.storage.clear();
     }
 
-    // ───────────────────── Observer API ─────────────────────
-
+    /** Observer API */
     public onItemAdded(item: Shape): void {
         this.recalculate(item);
     }
@@ -60,24 +49,26 @@ export class Warehouse implements RepositoryObserver<Shape> {
         this.storage.delete(item.id);
     }
 
-    // ───────────────────── Internal helpers ─────────────────────
-
+    /** перерасчёт */
     private recalculate(item: Shape): void {
         if (item instanceof RectangleModel) {
             this.storage.set(item.id, {
                 area: item.area(),
-                perimeter: item.perimeter(),
+                perimeter: item.perimeter()
             });
-        } else if (item instanceof ConeModel) {
+            return;
+        }
+
+        if (item instanceof ConeModel) {
             this.storage.set(item.id, {
                 volume: item.volume(),
                 baseArea: item.baseArea(),
-                surfaceArea: item.surfaceArea(),
+                surfaceArea: item.surfaceArea()
             });
-        } else {
-            // на всякий случай очищаем запись,
-            // чтобы не хранить устаревшие значения
-            this.storage.delete(item.id);
+            return;
         }
+
+        // unknown → remove (покрывается warehouse.unknownShape + extra)
+        this.storage.delete(item.id);
     }
 }

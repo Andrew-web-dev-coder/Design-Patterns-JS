@@ -3,157 +3,113 @@
 import { Shape } from "../shapes/shape";
 import { Specification } from "./specification";
 
-/**
- * Comparator для сортировки в репозитории.
- */
+/** Comparator для сортировки */
 export interface Comparator<T> {
     compare(a: T, b: T): number;
 }
 
-/**
- * Наблюдатель за репозиторием (Observer pattern).
- * Warehouse будет реализовывать этот интерфейс.
- */
+/** Наблюдатель репозитория */
 export interface RepositoryObserver<T> {
     onItemAdded(item: T): void;
     onItemUpdated(item: T): void;
     onItemRemoved(item: T): void;
 }
 
-/**
- * Repository pattern для фигур (Shape и наследников).
- * Хранит все созданные объекты и предоставляет
- * поиск, сортировку и базовый CRUD.
- */
 export class ShapeRepository<T extends Shape> {
-    private readonly items: Map<string, T> = new Map();
-
+    private readonly items = new Map<string, T>();
     private readonly observers: RepositoryObserver<T>[] = [];
 
-    /**
-     * Зарегистрировать наблюдателя (например, Warehouse).
-     */
+    /** Добавление наблюдателя */
     public addObserver(observer: RepositoryObserver<T>): void {
         if (!this.observers.includes(observer)) {
             this.observers.push(observer);
         }
     }
 
-    /**
-     * Отписать наблюдателя.
-     */
+    /** Удаление наблюдателя */
     public removeObserver(observer: RepositoryObserver<T>): void {
-        const index = this.observers.indexOf(observer);
-        if (index >= 0) {
-            this.observers.splice(index, 1);
+        const idx = this.observers.indexOf(observer);
+        if (idx !== -1) {
+            this.observers.splice(idx, 1);
         }
     }
 
     private notifyAdded(item: T): void {
-        this.observers.forEach((o) => o.onItemAdded(item));
+        this.observers.forEach(o => o.onItemAdded(item));
     }
 
     private notifyUpdated(item: T): void {
-        this.observers.forEach((o) => o.onItemUpdated(item));
+        this.observers.forEach(o => o.onItemUpdated(item));
     }
 
     private notifyRemoved(item: T): void {
-        this.observers.forEach((o) => o.onItemRemoved(item));
+        this.observers.forEach(o => o.onItemRemoved(item));
     }
 
-    /**
-     * Добавить фигуру в репозиторий.
-     */
+    /** Добавить */
     public add(item: T): void {
         this.items.set(item.id, item);
         this.notifyAdded(item);
     }
 
-    /**
-     * Получить фигуру по id.
-     */
+    /** Получить */
     public getById(id: string): T | undefined {
         return this.items.get(id);
     }
 
-    /**
-     * Удалить фигуру по id.
-     */
+    /** Удалить */
     public remove(id: string): void {
         const existing = this.items.get(id);
-        if (!existing) {
-            return;
-        }
+        if (!existing) return;
 
         this.items.delete(id);
         this.notifyRemoved(existing);
     }
 
-    /**
-     * Обновить фигуру. Вариант без мутаций:
-     * передаём новый объект, репозиторий заменяет ссылку.
-     *
-     * Важно: Warehouse пересчитает значения через Observer.
-     */
+    /** Заменить */
     public replace(oldId: string, newItem: T): void {
         const existing = this.items.get(oldId);
         if (!existing) {
             throw new Error(`ShapeRepository: item with id=${oldId} not found`);
         }
 
+        const sameId = newItem.id === oldId;
+
         this.items.set(newItem.id, newItem);
 
-        // если id изменился — удаляем старый ключ
-        if (newItem.id !== oldId) {
+        if (sameId) {
+            this.notifyUpdated(newItem);
+        } else {
             this.items.delete(oldId);
             this.notifyRemoved(existing);
             this.notifyAdded(newItem);
-        } else {
-            this.notifyUpdated(newItem);
         }
     }
 
-    /**
-     * Вернуть все элементы.
-     */
+    /** Все элементы */
     public getAll(): T[] {
-        return Array.from(this.items.values());
+        return [...this.items.values()];
     }
 
-    /**
-     * Поиск по спецификации.
-     * Примеры:
-     *  - поиск по id/имени
-     *  - поиск по координатам
-     *  - поиск по диапазону площади/объёма (через PredicateSpecification)
-     */
-    public query(specification?: Specification<T>): T[] {
-        if (!specification) {
-            return this.getAll();
-        }
-
-        return this.getAll().filter((item) => specification.isSatisfiedBy(item));
+    /** Поиск */
+    public query(spec?: Specification<T>): T[] {
+        if (!spec) return this.getAll();
+        return this.getAll().filter(item => spec.isSatisfiedBy(item));
     }
 
-    /**
-     * Сортировка с помощью Comparator.
-     */
-    public sorted(comparator: Comparator<T>): T[] {
-        const array = this.getAll().slice();
-        array.sort((a, b) => comparator.compare(a, b));
-        return array;
+    /** Сортировка */
+    public sorted(comp: Comparator<T>): T[] {
+        return this.getAll().sort((a, b) => comp.compare(a, b));
     }
 
-    /**
-     * Утилита для быстрого создания компаратора по любому числовому ключу.
-     */
+    /** Числовой comparator */
     public static numberComparator<T>(
-        selector: (item: T) => number,
+        selector: (item: T) => number
     ): Comparator<T> {
         return {
-            compare(a: T, b: T): number {
+            compare(a, b) {
                 return selector(a) - selector(b);
-            },
+            }
         };
     }
 }
