@@ -1,8 +1,5 @@
-// src/shapes/shape.ts
-
 export type ShapeDimension = "2D" | "3D";
 
-// добавили "test" для юнит-теста TestShape
 export type ShapeKind = "rectangle" | "cone" | "unknown" | "test";
 
 export abstract class Shape {
