@@ -1,54 +1,52 @@
 import { Shape } from "../shapes/shape";
 
+export type Point2D = { x: number; y: number };
+
 export class RectangleModel extends Shape {
-    public readonly x: number;
-    public readonly y: number;
-    public readonly width: number;
-    public readonly height: number;
+  public readonly points: ReadonlyArray<Point2D>;
 
-    constructor(x: number, y: number, width: number, height: number) {
-        super({
-            kind: "rectangle",
-            dimension: "2D",
-        });
+  constructor(points: Point2D[]) {
+    super({
+      kind: "rectangle",
+      dimension: "2D",
+    });
 
-        if (width <= 0 || height <= 0) {
-            throw new Error("Rectangle: width and height must be positive numbers");
-        }
-
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+    if (points.length !== 4) {
+      throw new Error("Rectangle: must have exactly 4 points");
     }
 
-    
-    public area(): number {
-        return this.width * this.height;
-    }
+    this.points = points;
+  }
 
-  
-    public perimeter(): number {
-        return 2 * (this.width + this.height);
-    }
+  private bounds() {
+    const xs = this.points.map((p) => p.x);
+    const ys = this.points.map((p) => p.y);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    return { minX, maxX, minY, maxY, width: maxX - minX, height: maxY - minY };
+  }
 
-   
-    public diagonal(): number {
-        return Math.sqrt(this.width ** 2 + this.height ** 2);
-    }
+  public area(): number {
+    const { width, height } = this.bounds();
+    return width * height;
+  }
 
-    
-    public touchesAxis(): boolean {
-        const xMin = this.x;
-        const xMax = this.x + this.width;
-        const yMin = this.y;
-        const yMax = this.y + this.height;
+  public perimeter(): number {
+    const { width, height } = this.bounds();
+    return 2 * (width + height);
+  }
 
-       
-        const touchesX = yMin <= 0 && yMax >= 0;
-        
-        const touchesY = xMin <= 0 && xMax >= 0;
+  public diagonal(): number {
+    const { width, height } = this.bounds();
+    return Math.sqrt(width ** 2 + height ** 2);
+  }
 
-        return touchesX || touchesY;
-    }
+  public touchesAxis(): boolean {
+    const { minX, maxX, minY, maxY } = this.bounds();
+    const touchesX = minY <= 0 && maxY >= 0; // пересекает ось X
+    const touchesY = minX <= 0 && maxX >= 0; // пересекает ось Y
+    return touchesX || touchesY;
+  }
 }

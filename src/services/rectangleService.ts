@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { RectangleModel } from "../rectangle/rectangleModel";
-import { RectangleFactory } from "../factories/rectangleFactory";
+import { RectangleFactory } from "../rectangle/rectangleFactory";
 import { RectangleValidator } from "../validators/rectangleValidator";
 import { FileReadError } from "../common/errors/FileReadError";
 import { ReadParametersError } from "../common/errors/ReadParametersError";
