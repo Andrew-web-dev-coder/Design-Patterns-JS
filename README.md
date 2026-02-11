@@ -2,10 +2,7 @@
 ## Вариант 11  
 ### Паттерны: Factory Method, Composite, Chain of Responsibility
 
----
-
-
-# 🏗 Архитектура решения
+# Архитектура решения
 
 ## Factory Method
 
