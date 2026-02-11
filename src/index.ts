@@ -1,5 +1,5 @@
-import { AdjacencyListStorage, AdjacencyMatrixStorage } from "./strategies";
-import { Graph, SubGraph, Vertex } from "./tasks";
+import { AdjacencyListStorage, AdjacencyMatrixStorage } from "./graphStorage";
+import { Graph, SubGraph, Vertex } from "./graph";
 
 console.log("=== Bridge + Composite: Graphs & Trees ===\n");
 

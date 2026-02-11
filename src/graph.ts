@@ -1,4 +1,4 @@
-import { GraphStorage, VertexId, AdjacencyListStorage } from "./strategies";
+import { GraphStorage, VertexId, AdjacencyListStorage } from "./graphStorage";
 
 // =======================
 // COMPOSITE
