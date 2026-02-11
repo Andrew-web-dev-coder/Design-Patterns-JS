@@ -1,115 +1,59 @@
-import { GraphStorage, VertexId, AdjacencyListStorage } from "./strategies";
-
-// =======================
-// COMPOSITE
-// =======================
-export interface GraphComponent {
+export interface TaskComponent {
   getName(): string;
-  add(child: GraphComponent): void;
-  getChildren(): GraphComponent[];
-  getVertices(): Vertex[];
-  print(indent?: number): string;
+  getComplexity(): number;
+  add(task: TaskComponent): void;
+  execute(): void;
 }
 
-export class Vertex implements GraphComponent {
-  constructor(private id: VertexId, private label?: string) {}
-
-  getId(): VertexId {
-    return this.id;
-  }
+// =====================
+// Leaf
+// =====================
+export abstract class Task implements TaskComponent {
+  constructor(
+    protected name: string,
+    protected complexity: number
+  ) {}
 
   getName(): string {
-    return this.label ? `${this.label}(${this.id})` : `Vertex(${this.id})`;
+    return this.name;
+  }
+
+  getComplexity(): number {
+    return this.complexity;
   }
 
   add(): void {
-    throw new Error("Vertex is a leaf.");
+    throw new Error("Cannot add subtask to simple task.");
   }
 
-  getChildren(): GraphComponent[] {
-    return [];
-  }
-
-  getVertices(): Vertex[] {
-    return [this];
-  }
-
-  print(indent: number = 0): string {
-    return `${" ".repeat(indent)}- ${this.getName()}`;
-  }
+  abstract execute(): void;
 }
 
-export class SubGraph implements GraphComponent {
-  protected children: GraphComponent[] = [];
+// =====================
+// Composite
+// =====================
+export class Epic implements TaskComponent {
+  private children: TaskComponent[] = [];
+
   constructor(private name: string) {}
 
   getName(): string {
     return this.name;
   }
 
-  add(child: GraphComponent): void {
-    this.children.push(child);
+  add(task: TaskComponent): void {
+    this.children.push(task);
   }
 
-  getChildren(): GraphComponent[] {
-    return [...this.children];
+  getComplexity(): number {
+    return this.children.reduce(
+      (sum, child) => sum + child.getComplexity(),
+      0
+    );
   }
 
-  getVertices(): Vertex[] {
-    return this.children.flatMap((c) => c.getVertices());
-  }
-
-  print(indent: number = 0): string {
-    const head = `${" ".repeat(indent)}+ ${this.getName()}`;
-    const body = this.children.map((c) => c.print(indent + 2)).join("\n");
-    return body ? `${head}\n${body}` : head;
-  }
-}
-
-// =======================
-// BRIDGE (Abstraction)
-// =======================
-export class Graph extends SubGraph {
-  constructor(name: string, private storage: GraphStorage = new AdjacencyListStorage()) {
-    super(name);
-  }
-
-  // Bridge: переключение реализации хранения
-  setStorage(storage: GraphStorage) {
-    const vertices = this.getVertices().map((v) => v.getId());
-    const edges = this.storage.getEdges();
-
-    this.storage = storage;
-
-    for (const id of vertices) this.storage.addVertex(id);
-    for (const e of edges) this.storage.addEdge(e.from, e.to, e.weight);
-  }
-
-  getStorageKind(): string {
-    return this.storage.kind;
-  }
-
-  // подтягиваем вершины из Composite-дерева в storage
-  registerVertices(): void {
-    for (const v of this.getVertices()) this.storage.addVertex(v.getId());
-  }
-
-  connect(a: VertexId, b: VertexId, weight?: number): void {
-  const existing = new Set(this.getVertices().map(v => v.getId()));
-
-  if (!existing.has(a) || !existing.has(b)) {
-    throw new Error(`Cannot connect ${a} -> ${b}. Vertex does not exist in graph.`);
-  }
-
-  this.storage.addEdge(a, b, weight);
-}
-
-
-  neighbors(id: VertexId) {
-    return this.storage.getNeighbors(id);
-  }
-
-  printAdjacency(): string {
-    return this.storage.toString();
+  execute(): void {
+    console.log(`Executing Epic: ${this.name}`);
+    this.children.forEach((task) => task.execute());
   }
 }

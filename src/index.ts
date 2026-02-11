@@ -1,63 +1,40 @@
-import { AdjacencyListStorage, AdjacencyMatrixStorage } from "./strategies";
-import { Graph, SubGraph, Vertex } from "./tasks";
+import { Epic } from "./tasks";
+import {
+  BugFactory,
+  FeatureFactory,
+  DocumentationFactory,
+} from "./factory";
+import { JuniorDev, SeniorDev, TeamLead } from "./chain";
 
-console.log("=== Bridge + Composite: Graphs & Trees ===\n");
+console.log("=== Factory + Composite + Chain of Responsibility ===\n");
 
-// Composite: граф + подграфы + вершины
-const g = new Graph("MainGraph", new AdjacencyListStorage());
+// Factory
+const bugFactory = new BugFactory();
+const featureFactory = new FeatureFactory();
+const docFactory = new DocumentationFactory();
 
-const core = new SubGraph("Core");
-const ui = new SubGraph("UI");
-const nested = new SubGraph("Nested");
+const task1 = bugFactory.createTask("Fix login bug", 2);
+const task2 = featureFactory.createTask("Add payment system", 5);
+const task3 = docFactory.createTask("Update API docs", 7);
 
-core.add(new Vertex("A", "Alpha"));
-core.add(new Vertex("B", "Beta"));
+// Composite
+const epic = new Epic("Release v1.0");
+epic.add(task1);
+epic.add(task2);
+epic.add(task3);
 
-ui.add(new Vertex("C", "Gamma"));
-nested.add(new Vertex("D", "Delta"));
-nested.add(new Vertex("E", "Epsilon"));
-ui.add(nested);
+console.log("Epic total complexity:", epic.getComplexity());
+epic.execute();
 
-g.add(core);
-g.add(ui);
+console.log("\n--- Chain of Responsibility ---");
 
-// Bridge: хранилище
-g.registerVertices();
-g.connect("A", "B", 5);
-g.connect("B", "C", 2);
-g.connect("C", "D");
-g.connect("D", "E", 7);
+// Chain
+const junior = new JuniorDev();
+const senior = new SeniorDev();
+const lead = new TeamLead();
 
-console.log("Composite structure:");
-console.log(g.print());
+junior.setNext(senior).setNext(lead);
 
-console.log("\nStorage:", g.getStorageKind());
-console.log(g.printAdjacency());
-
-console.log("\nSwitch storage to MATRIX (Bridge):");
-g.setStorage(new AdjacencyMatrixStorage());
-console.log("Storage:", g.getStorageKind());
-console.log(g.printAdjacency());
-
-// Мини-дерево (как частный случай графа)
-console.log("\nTree example:");
-const tree = new Graph("Tree");
-const root = new SubGraph("Root");
-root.add(new Vertex("R", "RootV"));
-
-const left = new SubGraph("Left");
-left.add(new Vertex("L", "LeftV"));
-
-const right = new SubGraph("Right");
-right.add(new Vertex("RR", "RightV"));
-
-root.add(left);
-root.add(right);
-tree.add(root);
-
-tree.registerVertices();
-tree.connect("R", "L");
-tree.connect("R", "RR");
-
-console.log(tree.print());
-console.log(tree.printAdjacency());
+junior.handle(task1);
+junior.handle(task2);
+junior.handle(task3);
