@@ -1,5 +1,5 @@
 import { ConeValidator } from "../../validators/coneValidator";
-import { ConeFactory } from "../coneFactory";
+import { ConeFactory } from "../../factories/coneFactory";
 import { ConeModel } from "../coneModel";
 import { ConeValidationError } from "../../common/errors/ConeValidationError";
 import { Point3D } from "../../geometry/point3D";

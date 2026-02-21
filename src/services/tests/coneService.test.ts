@@ -3,7 +3,7 @@ import * as fs from "fs";
 import { ConeService } from "../coneService";
 import { ConeModel } from "../../cone/coneModel";
 import { ConeValidator } from "../../validators/coneValidator";
-import { ConeFactory } from "../../cone/coneFactory";
+import { ConeFactory } from "../../factories/coneFactory";
 import { ReadParametersError } from "../../common/errors/ReadParametersError";
 import { FileReadError } from "../../common/errors/FileReadError";
 import { Logger } from "../../common/logging/logger";

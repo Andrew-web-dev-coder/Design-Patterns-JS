@@ -1,5 +1,5 @@
 import { RectangleValidator } from "../../validators/rectangleValidator";
-import { RectangleFactory } from "../rectangleFactory";
+import { RectangleFactory } from "../../factories/rectangleFactory";
 import { RectangleModel } from "../rectangleModel";
 import { RectangleValidationError } from "../../common/errors/RectangleValidationError";
 import { RectangleService } from "../../services/rectangleService";

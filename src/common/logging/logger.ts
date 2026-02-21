@@ -28,7 +28,8 @@ export const logger = pino({
 
 export class Logger {
     static info(message: string, ...args: unknown[]): void {
-        logger.info({ args }, `ℹ️  INFO: ${message}`);
+    if (args.length > 0) logger.info({ args }, message);
+    else logger.info(message);
     }
 
     static success(message: string, ...args: unknown[]): void {

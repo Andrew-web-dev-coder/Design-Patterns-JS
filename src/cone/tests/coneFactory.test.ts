@@ -1,4 +1,4 @@
-import { ConeFactory } from "../coneFactory";
+import { ConeFactory } from "../../factories/coneFactory";
 import { ConeModel } from "../coneModel";
 
 describe("ConeFactory FULL COVERAGE", () => {
