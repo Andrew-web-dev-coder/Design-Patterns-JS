@@ -1,50 +1,32 @@
 import { RectangleModel } from "../rectangle/rectangleModel";
 import { RectangleValidator } from "../validators/rectangleValidator";
 import { Point2D } from "../geometry/point2D";
-import { Logger } from "../common/logging/logger";
-
-const DEFAULT_RECTANGLE_NAME = "rectangle";
-
-function generateId(prefix: string): string {
-  const rand = Math.random().toString(36).slice(2, 8);
-  const stamp = Date.now().toString(36);
-  return `${prefix}-${stamp}-${rand}`;
-}
 
 export class RectangleFactory {
   /**
-   * values: [x1, y1, x2, y2] — диагональные точки.
+   * values: [x1, y1, x2, y2] — диагональные точки прямоугольника (оси-параллельного)
    */
-  public static fromNumbers(values: number[], name: string = DEFAULT_RECTANGLE_NAME): RectangleModel {
+  public static fromNumbers(values: number[]): RectangleModel {
     RectangleValidator.validateNumeric(values);
 
     const [x1, y1, x2, y2] = values;
 
-    const minX = Math.min(x1, x2);
-    const maxX = Math.max(x1, x2);
-    const minY = Math.min(y1, y2);
-    const maxY = Math.max(y1, y2);
-
+    // Строим 4 вершины оси-параллельного прямоугольника по диагонали
     const points = [
-      new Point2D(minX, minY),
-      new Point2D(minX, maxY),
-      new Point2D(maxX, maxY),
-      new Point2D(maxX, minY),
+      new Point2D(x1, y1),
+      new Point2D(x2, y1),
+      new Point2D(x2, y2),
+      new Point2D(x1, y2),
     ];
 
-    return new RectangleModel({
-      id: generateId("rectangle"),
-      name,
-      points,
-    });
+    return new RectangleModel({ points });
   }
 
-  public static fromTextLine(line: string, name: string = DEFAULT_RECTANGLE_NAME): RectangleModel | null {
+  public static fromTextLine(line: string): RectangleModel | null {
     try {
       const nums = RectangleValidator.validateTextLine(line);
-      return RectangleFactory.fromNumbers(nums, name);
-    } catch (err) {
-      Logger.warn(`Invalid rectangle line skipped: "${line}"`, err);
+      return RectangleFactory.fromNumbers(nums);
+    } catch {
       return null;
     }
   }

@@ -1,34 +1,48 @@
-import { runExample } from "../main";
+import { readFile } from "node:fs/promises";
+
+import { main } from "../main";
 import { Logger } from "../../common/logging/logger";
-import { ConeValidator } from "../../validators/coneValidator";
 
-describe("main.ts FULL coverage", () => {
-    beforeEach(() => {
-        jest.spyOn(Logger, "info").mockImplementation(() => {});
-        jest.spyOn(Logger, "success").mockImplementation(() => {});
-        jest.spyOn(Logger, "error").mockImplementation(() => {});
-    });
 
-    afterEach(() => {
-        jest.restoreAllMocks();
-    });
+jest.mock("node:fs/promises", () => ({
+  readFile: jest.fn(),
+}));
 
-    test("runExample should log success for valid cone", () => {
-        jest.spyOn(ConeValidator, "validateTextLine")
-            .mockReturnValue([0, 0, 0, 5, 10]);
+const readFileMock = readFile as unknown as jest.Mock;
 
-        runExample();
+describe("main.ts (smoke)", () => {
+  beforeEach(() => {
+    jest.spyOn(Logger, "info").mockImplementation(() => {});
+    jest.spyOn(Logger, "success").mockImplementation(() => {});
+    jest.spyOn(Logger, "warn").mockImplementation(() => {});
+    jest.spyOn(Logger, "error").mockImplementation(() => {});
+  });
 
-        expect(Logger.info).toHaveBeenCalled();
-        expect(Logger.success).toHaveBeenCalled();
-    });
+  afterEach(() => {
+    jest.restoreAllMocks();
+    readFileMock.mockReset();
+  });
 
-    test("runExample should log error on exception", () => {
-        jest.spyOn(ConeValidator, "validateTextLine")
-            .mockImplementation(() => { throw new Error("Bad input"); });
+  test("main should create cones for valid lines and skip invalid lines", async () => {
+   
+    readFileMock.mockResolvedValueOnce("0 0 0 5 10\na b c d e\n1 2 3 4 5\n");
 
-        runExample();
+    await main();
 
-        expect(Logger.error).toHaveBeenCalled();
-    });
+    
+    expect(Logger.success).toHaveBeenCalledTimes(2);
+    expect(Logger.warn).toHaveBeenCalledTimes(1);
+
+    
+    expect(Logger.info).toHaveBeenCalled();
+  });
+
+  test("main should log fatal error if file cannot be read", async () => {
+    readFileMock.mockRejectedValueOnce(new Error("ENOENT"));
+
+    await main();
+
+    expect(Logger.error).toHaveBeenCalledTimes(1);
+    expect(Logger.success).not.toHaveBeenCalled();
+  });
 });

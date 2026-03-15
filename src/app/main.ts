@@ -1,12 +1,12 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 
-import { ConeValidator } from "../validators/coneValidator";
 import { ConeFactory } from "../factories/coneFactory";
 import { Logger } from "../common/logging/logger";
 import { FileReadError } from "../common/errors/FileReadError";
 
-const DATA_FILE_RELATIVE_PATH = path.join("data", "cone.txt");
+const DATA_FILE_RELATIVE_PATH = path.join("data", "sample_cones.txt");
+const LINE_SPLIT_REGEX = /\r?\n/;
 
 async function readLinesFromFile(relativePath: string): Promise<string[]> {
   const absPath = path.resolve(process.cwd(), relativePath);
@@ -14,11 +14,10 @@ async function readLinesFromFile(relativePath: string): Promise<string[]> {
   try {
     const content = await readFile(absPath, { encoding: "utf-8" });
     return content
-      .split(/\r?\n/)
+      .split(LINE_SPLIT_REGEX)
       .map((l) => l.trim())
       .filter((l) => l.length > 0);
   } catch (err) {
-    // Важно: выбрасываем кастомное исключение, а не стандартное
     const message = err instanceof Error ? err.message : String(err);
     throw new FileReadError(`Cannot read file: ${absPath}. Reason: ${message}`);
   }
@@ -34,26 +33,22 @@ export async function main(): Promise<void> {
     let skipped = 0;
 
     for (const line of lines) {
-      try {
-        const nums = ConeValidator.validateTextLine(line);
-        const cone = ConeFactory.fromNumbers(nums);
+      const cone = ConeFactory.fromTextLine(line);
 
-        created += 1;
-        Logger.success(
-          `OK: cone radius=${cone.radius}, height=${cone.height}`
-        );
-      } catch (err) {
+      if (!cone) {
         skipped += 1;
-        Logger.warn(`SKIP: invalid line "${line}"`, err);
+        Logger.warn(`SKIP: invalid line "${line}"`);
+        continue;
       }
+
+      created += 1;
+      Logger.success(`OK: cone radius=${cone.radius}, height=${cone.height}`);
     }
 
     Logger.info(`Done. Created=${created}, Skipped=${skipped}`);
   } catch (err) {
-    // Это ошибки уровня “файл не прочитан” и т.п. — тут уже завершаем
     Logger.error("Fatal error: cannot run app", err);
   }
 }
 
-// Если ты хочешь, чтобы файл был настоящей entrypoint:
 void main();

@@ -8,14 +8,20 @@ export abstract class Shape {
   public readonly dimension: ShapeDimension;
 
   protected constructor(options: {
-    id: string;
     kind: ShapeKind;
     dimension: ShapeDimension;
     name?: string;
+    id?: string;
   }) {
-    this.id = options.id;
     this.kind = options.kind;
     this.dimension = options.dimension;
     this.name = options.name ?? options.kind;
+    this.id = options.id ?? Shape.generateId(options.kind);
+  }
+
+  public static generateId(kind: ShapeKind): string {
+    const rand = Math.random().toString(36).slice(2, 8);
+    const stamp = Date.now().toString(36);
+    return `${kind}-${stamp}-${rand}`;
   }
 }
