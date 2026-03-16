@@ -1,54 +1,41 @@
 import { Shape } from "../shapes/shape";
+import { Point2D } from "../geometry/point2D";
+
+export type RectangleModelParams = {
+  points: Point2D[];
+  id?: string;
+  name?: string;
+};
 
 export class RectangleModel extends Shape {
-    public readonly x: number;
-    public readonly y: number;
-    public readonly width: number;
-    public readonly height: number;
+  private _points: Point2D[];
 
-    constructor(x: number, y: number, width: number, height: number) {
-        super({
-            kind: "rectangle",
-            dimension: "2D",
-        });
+  constructor(params: RectangleModelParams) {
+    super({
+      kind: "rectangle",
+      dimension: "2D",
+      id: params.id,
+      name: params.name,
+    });
 
-        if (width <= 0 || height <= 0) {
-            throw new Error("Rectangle: width and height must be positive numbers");
-        }
+    this._points = [...params.points];
+  }
 
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+  public get points(): ReadonlyArray<Point2D> {
+    return this._points;
+  }
+
+  public setPoints(points: Point2D[]): void {
+    this._points = [...points];
+    this.notify();
+  }
+
+  public setPoint(index: number, point: Point2D): void {
+    if (index < 0 || index >= this._points.length) {
+      throw new Error(`Point index out of range: ${index}`);
     }
 
-    
-    public area(): number {
-        return this.width * this.height;
-    }
-
-  
-    public perimeter(): number {
-        return 2 * (this.width + this.height);
-    }
-
-   
-    public diagonal(): number {
-        return Math.sqrt(this.width ** 2 + this.height ** 2);
-    }
-
-    
-    public touchesAxis(): boolean {
-        const xMin = this.x;
-        const xMax = this.x + this.width;
-        const yMin = this.y;
-        const yMax = this.y + this.height;
-
-       
-        const touchesX = yMin <= 0 && yMax >= 0;
-        
-        const touchesY = xMin <= 0 && xMax >= 0;
-
-        return touchesX || touchesY;
-    }
+    this._points[index] = point;
+    this.notify();
+  }
 }

@@ -25,3 +25,4 @@ describe("FileReadError tests", () => {
         expect(typeof err.stack).toBe("string");
     });
 });
+

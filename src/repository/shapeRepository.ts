@@ -1,115 +1,86 @@
-// src/repository/shapeRepository.ts
-
 import { Shape } from "../shapes/shape";
-import { Specification } from "./specification";
+import { Specification } from "../specifications/specification";
+import { Comparator } from "../comparators/comparator";
+import { WarehouseInitializer } from "../warehouse/warehouseInitializer";
+import { Warehouse } from "../warehouse/warehouse";
+import { WarehouseObserver } from "../warehouse/warehouseObserver";
 
-/** Comparator для сортировки */
-export interface Comparator<T> {
-    compare(a: T, b: T): number;
-}
+export class ShapeRepository {
+  private static instance: ShapeRepository | null = null;
 
-/** Наблюдатель репозитория */
-export interface RepositoryObserver<T> {
-    onItemAdded(item: T): void;
-    onItemUpdated(item: T): void;
-    onItemRemoved(item: T): void;
-}
+  private readonly shapes: Map<string, Shape>;
+  private readonly warehouseObserver: WarehouseObserver;
 
-export class ShapeRepository<T extends Shape> {
-    private readonly items = new Map<string, T>();
-    private readonly observers: RepositoryObserver<T>[] = [];
+  private constructor() {
+    this.shapes = new Map<string, Shape>();
+    this.warehouseObserver = new WarehouseObserver();
+  }
 
-    /** Добавление наблюдателя */
-    public addObserver(observer: RepositoryObserver<T>): void {
-        if (!this.observers.includes(observer)) {
-            this.observers.push(observer);
-        }
+  public static getInstance(): ShapeRepository {
+    if (!ShapeRepository.instance) {
+      ShapeRepository.instance = new ShapeRepository();
     }
 
-    /** Удаление наблюдателя */
-    public removeObserver(observer: RepositoryObserver<T>): void {
-        const idx = this.observers.indexOf(observer);
-        if (idx !== -1) {
-            this.observers.splice(idx, 1);
-        }
+    return ShapeRepository.instance;
+  }
+
+  public add(shape: Shape): void {
+    this.shapes.set(shape.id, shape);
+    shape.attach(this.warehouseObserver);
+    WarehouseInitializer.saveShapeParameters(shape);
+  }
+
+  public addMany(shapes: Shape[]): void {
+    shapes.forEach((shape) => this.add(shape));
+  }
+
+  public removeById(id: string): boolean {
+    const shape = this.shapes.get(id);
+
+    if (shape) {
+      shape.detach(this.warehouseObserver);
     }
 
-    private notifyAdded(item: T): void {
-        this.observers.forEach(o => o.onItemAdded(item));
+    const removed = this.shapes.delete(id);
+
+    if (removed) {
+      Warehouse.getInstance().remove(id);
     }
 
-    private notifyUpdated(item: T): void {
-        this.observers.forEach(o => o.onItemUpdated(item));
-    }
+    return removed;
+  }
 
-    private notifyRemoved(item: T): void {
-        this.observers.forEach(o => o.onItemRemoved(item));
-    }
+  public getById(id: string): Shape | null {
+    return this.shapes.get(id) ?? null;
+  }
 
-    /** Добавить */
-    public add(item: T): void {
-        this.items.set(item.id, item);
-        this.notifyAdded(item);
-    }
+  public getAll(): Shape[] {
+    return Array.from(this.shapes.values());
+  }
 
-    /** Получить */
-    public getById(id: string): T | undefined {
-        return this.items.get(id);
-    }
+  public has(id: string): boolean {
+    return this.shapes.has(id);
+  }
 
-    /** Удалить */
-    public remove(id: string): void {
-        const existing = this.items.get(id);
-        if (!existing) return;
+  public count(): number {
+    return this.shapes.size;
+  }
 
-        this.items.delete(id);
-        this.notifyRemoved(existing);
-    }
+  public clear(): void {
+    this.shapes.forEach((shape) => shape.detach(this.warehouseObserver));
+    this.shapes.clear();
+    Warehouse.getInstance().clear();
+  }
 
-    /** Заменить */
-    public replace(oldId: string, newItem: T): void {
-        const existing = this.items.get(oldId);
-        if (!existing) {
-            throw new Error(`ShapeRepository: item with id=${oldId} not found`);
-        }
+  public findBySpecification(specification: Specification<Shape>): Shape[] {
+    return this.getAll().filter((shape) => specification.isSatisfiedBy(shape));
+  }
 
-        const sameId = newItem.id === oldId;
+  public findOneBySpecification(specification: Specification<Shape>): Shape | null {
+    return this.getAll().find((shape) => specification.isSatisfiedBy(shape)) ?? null;
+  }
 
-        this.items.set(newItem.id, newItem);
-
-        if (sameId) {
-            this.notifyUpdated(newItem);
-        } else {
-            this.items.delete(oldId);
-            this.notifyRemoved(existing);
-            this.notifyAdded(newItem);
-        }
-    }
-
-    /** Все элементы */
-    public getAll(): T[] {
-        return [...this.items.values()];
-    }
-
-    /** Поиск */
-    public query(spec?: Specification<T>): T[] {
-        if (!spec) return this.getAll();
-        return this.getAll().filter(item => spec.isSatisfiedBy(item));
-    }
-
-    /** Сортировка */
-    public sorted(comp: Comparator<T>): T[] {
-        return this.getAll().sort((a, b) => comp.compare(a, b));
-    }
-
-    /** Числовой comparator */
-    public static numberComparator<T>(
-        selector: (item: T) => number
-    ): Comparator<T> {
-        return {
-            compare(a, b) {
-                return selector(a) - selector(b);
-            }
-        };
-    }
+  public sort(comparator: Comparator<Shape>): Shape[] {
+    return this.getAll().sort((a, b) => comparator.compare(a, b));
+  }
 }
